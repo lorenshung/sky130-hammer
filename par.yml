@@ -1,0 +1,60 @@
+# Placement Constraints (standard cells, SRAMs)
+
+# Source: hammer/src/hammer-vlsi/defaults.yml
+# - Valid options:
+#   - "r0"   (standard orientation)
+#   - "r90"  (rotated 90 degrees clockwise)
+#   - "r180" (rotated 180 degrees)
+#   - "r270" (rotated 270 degrees clockwise; equivalent to -90 degrees counterclockwise)
+#   - "mx"   (mirrored about the x-axis)
+#   - "mx90" (mirrored about the x-axis, then rotated 90 degrees clockwise)
+#   - "my"   (mirrored about the y-axis)
+#   - "my90" (mirrored about the y-axis, then rotated 90 degrees clockwise)
+# x (float) - x coordinate in um
+# - Required for all types
+# y (float) - y coordinate in um
+# - Required for all types
+# width (float) - width in um
+# - Required for all types, but can be auto-filled for hierarchical and hardmacro if left blank
+# height (float) - height in um
+# - Required for all types, but can be auto-filled for hierarchical and hardmacro if left blank
+
+vlsi.inputs.placement_constraints:
+  - path: "caliptra_top"
+    type: toplevel
+
+    # Set the floorplan margin
+    margins:
+      left:   0
+      right:  0
+      top:    0
+      bottom: 0
+
+    # Lower left corner coordinate of the top module
+    x: 0
+    y: 0
+
+    # Floorplan dimensions
+    width: &FP_WIDTH 1800
+    height: 1800
+
+# Pin placement constraints
+# Pins are placed at the bottom of the layout
+vlsi.inputs.pin_mode: generated
+vlsi.inputs.pin.generate_mode: semi_auto
+vlsi.inputs.pin.assignments: [
+  {pins: "*", layers: ["met4"], side: "bottom"}
+]
+
+# Hammer will auto-generate a CPF for simple power designs; see hammer/src/hammer-vlsi/defaults.yml for more info
+vlsi.inputs.power_spec_mode: "auto"
+vlsi.inputs.power_spec_type: "cpf"
+
+# Clock Concurrent Optimization for CTS
+par.innovus.use_cco: true
+
+# Enable this option will let Innovus perform auto floorplan exploration.
+# All the placement constraints specified above will be ignored.
+# This might lead to poor QoR and more DRVs.
+
+#par.innovus.floorplan_mode: auto
