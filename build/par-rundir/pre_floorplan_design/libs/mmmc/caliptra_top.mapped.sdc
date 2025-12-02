@@ -1,0 +1,1 @@
+/scratch/cs199-cfh/sky130-hammer/build/syn-rundir/caliptra_top.mapped.sdc
