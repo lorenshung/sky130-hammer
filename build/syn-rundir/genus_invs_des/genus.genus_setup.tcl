@@ -2,7 +2,7 @@
 #
 # Genus(TM) Synthesis Solution setup file
 # Created by Genus(TM) Synthesis Solution 22.11-s104_1
-#   on 11/26/2025 21:55:25
+#   on 12/05/2025 20:36:30
 #
 # This file can only be run in Genus Common UI mode.
 #
@@ -51,21 +51,21 @@ set _slk_ [::legacy::get_attribute slack design:caliptra_top]
 if {[regexp {^-?[0-9.]+$} $_slk_]} {
   set _slk_ [format %.1f $_slk_]
 }
-if {$_slk_ != "-284.7"} {
-   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden slack: -284.7,  current slack: $_slk_"
+if {$_slk_ != "-128.3"} {
+   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden slack: -128.3,  current slack: $_slk_"
 }
 unset _slk_
 # multi-mode slack
-if {"[string_representation [::legacy::get_attribute slack_by_mode design:caliptra_top]]" != "{{mode:caliptra_top/ss_100C_1v60.setup_view -284.7}}"} {
-   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden slack_by_mode: {{mode:caliptra_top/ss_100C_1v60.setup_view -284.7}}  current slack_by_mode: [string_representation [::legacy::get_attribute slack_by_mode design:caliptra_top]]"
+if {"[string_representation [::legacy::get_attribute slack_by_mode design:caliptra_top]]" != "{{mode:caliptra_top/ss_100C_1v60.setup_view -128.3}}"} {
+   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden slack_by_mode: {{mode:caliptra_top/ss_100C_1v60.setup_view -128.3}}  current slack_by_mode: [string_representation [::legacy::get_attribute slack_by_mode design:caliptra_top]]"
 }
 # tns
 set _tns_ [::legacy::get_attribute tns design:caliptra_top]
 if {[regexp {^-?[0-9.]+$} $_tns_]} {
   set _tns_ [format %.0f $_tns_]
 }
-if {$_tns_ != "22946"} {
-   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden tns: 22946,  current tns: $_tns_"
+if {$_tns_ != "2472"} {
+   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden tns: 2472,  current tns: $_tns_"
 }
 unset _tns_
 # cell area
@@ -73,8 +73,8 @@ set _cell_area_ [::legacy::get_attribute cell_area design:caliptra_top]
 if {[regexp {^-?[0-9.]+$} $_cell_area_]} {
   set _cell_area_ [format %.0f $_cell_area_]
 }
-if {$_cell_area_ != "17465685"} {
-   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden cell area: 17465685,  current cell area: $_cell_area_"
+if {$_cell_area_ != "33863344"} {
+   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden cell area: 33863344,  current cell area: $_cell_area_"
 }
 unset _cell_area_
 # net area
@@ -82,8 +82,8 @@ set _net_area_ [::legacy::get_attribute net_area design:caliptra_top]
 if {[regexp {^-?[0-9.]+$} $_net_area_]} {
   set _net_area_ [format %.0f $_net_area_]
 }
-if {$_net_area_ != "24807780"} {
-   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden net area: 24807780,  current net area: $_net_area_"
+if {$_net_area_ != "41325540"} {
+   mesg_send [::legacy::find -message /messages/PHYS/PHYS-92] "golden net area: 41325540,  current net area: $_net_area_"
 }
 unset _net_area_
 # library domain count

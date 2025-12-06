@@ -4,6 +4,13 @@ build/syn-rundir/fv/caliptra_top/fv_map.fv.json
 build/syn-rundir/super_thread_debug/map_remote_condense_rsl/cb_seq
 build/syn-rundir/caliptra_top.mapped.v
 build/syn-rundir/caliptra_top.mapped.sdf
+build/syn-rundir/find_regs_paths.json
+build/syn-rundir/pre_generate_reports
+build/syn-rundir/pre_write_outputs
+build/syn-rundir/pre_write_regs
+build/syn-rundir/super_thread_debug/map_remote_condense_rsl/cb_seq_8
+build/syn-rundir/fv/caliptra_top/fv_map.map.do
+build/syn-rundir/pre_add_tieoffs
 
 ### Linux ###
 *~

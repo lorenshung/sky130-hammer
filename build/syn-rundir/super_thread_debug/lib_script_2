@@ -6,9 +6,9 @@ set lib_load_start [::legacy::get_attribute runtime /]
 rc_st::setup_log_dir
 rc_st::setup_pbs_db_dir
 if { ![llength [vfind / -library *]]} {
-::legacy::set_attribute -quiet shm_id_rc 16548283 /
+::legacy::set_attribute -quiet shm_id_rc 42205226 /
 ::legacy::set_attribute -quiet hostname_main eda-4.EECS.Berkeley.EDU /
-::legacy::set_attribute -quiet pid_main 1268824 /
+::legacy::set_attribute -quiet pid_main 2283229 /
 ::legacy::set_attribute -quiet process_group_id 0 /
 ::legacy::set_attribute -quiet max_cpus_per_server 4 /
 ::legacy::set_attribute -quiet max_cpus_per_server_int 4 /
@@ -207,7 +207,7 @@ if {[is_attr_ifca hostname_main ] && 0} {
 }
 }
 set cur_attr_val [::legacy::get_attribute pid_main /]
-set saved_attr_val 1268824
+set saved_attr_val 2283229
 if {(1 || [string index $cur_attr_val 0] ne "") &&  ((1 && ![attr_is_set pid_main /]) || $saved_attr_val ne $cur_attr_val)} {
 if {[is_attr_ifca pid_main ] && 0} {
 ::legacy::reset_attribute -quiet pid_main / 
@@ -2557,7 +2557,7 @@ if {[is_attr_ifca hdl_error_on_logic_abstract ] && 0} {
 }
 set cur_attr_val [::legacy::get_attribute hdl_parameter_naming_style /]
 set saved_attr_val _%s%d
-if {(1 || [string index $cur_attr_val 0] ne "") &&  ((0 && ![attr_is_set hdl_parameter_naming_style /]) || $saved_attr_val ne $cur_attr_val)} {
+if {(1 || [string index $cur_attr_val 0] ne "") &&  ((1 && ![attr_is_set hdl_parameter_naming_style /]) || $saved_attr_val ne $cur_attr_val)} {
 if {[is_attr_ifca hdl_parameter_naming_style ] && 0} {
 ::legacy::reset_attribute -quiet hdl_parameter_naming_style / 
 } else {
@@ -8604,7 +8604,7 @@ if {[is_attr_ifca max_cpus_per_server_int ] && 0} {
 }
 }
 set cur_attr_val [::legacy::get_attribute shm_id_rc /]
-set saved_attr_val 16548283
+set saved_attr_val 42205226
 if {(1 || [string index $cur_attr_val 0] ne "") &&  ((1 && ![attr_is_set shm_id_rc /]) || $saved_attr_val ne $cur_attr_val)} {
 if {[is_attr_ifca shm_id_rc ] && 0} {
 ::legacy::reset_attribute -quiet shm_id_rc / 
@@ -8648,6 +8648,15 @@ if {[is_attr_ifca dont_set_region_leaf ] && 0} {
 ::legacy::set_attribute -quiet dont_set_region_leaf $saved_attr_val /
 }
 }
+set cur_attr_val [::legacy::get_attribute ovf_mode /]
+set saved_attr_val false
+if {(1 || [string index $cur_attr_val 0] ne "") &&  ((1 && ![attr_is_set ovf_mode /]) || $saved_attr_val ne $cur_attr_val)} {
+if {[is_attr_ifca ovf_mode ] && 0} {
+::legacy::reset_attribute -quiet ovf_mode / 
+} else {
+::legacy::set_attribute -quiet ovf_mode $saved_attr_val /
+}
+}
 set cur_attr_val [::legacy::get_attribute write_vlog_line_wrap_limit /]
 set saved_attr_val 72
 if {(1 || [string index $cur_attr_val 0] ne "") &&  ((1 && ![attr_is_set write_vlog_line_wrap_limit /]) || $saved_attr_val ne $cur_attr_val)} {
@@ -8658,7 +8667,7 @@ if {[is_attr_ifca write_vlog_line_wrap_limit ] && 0} {
 }
 }
 set cur_attr_val [::legacy::get_attribute flow_metrics_snapshot_uuid /]
-set saved_attr_val 7df98215-8947-4bd8-aa65-567161b6f3cc
+set saved_attr_val a19c5cac-dcf6-4eb7-8175-61c56d6a6c9d
 if {(1 || [string index $cur_attr_val 0] ne "") &&  ((1 && ![attr_is_set flow_metrics_snapshot_uuid /]) || $saved_attr_val ne $cur_attr_val)} {
 if {[is_attr_ifca flow_metrics_snapshot_uuid ] && 0} {
 ::legacy::reset_attribute -quiet flow_metrics_snapshot_uuid / 
@@ -9180,7 +9189,7 @@ if {[is_attr_ifca gsp_gen_part_size ] && 0} {
 }
 }
 set cur_attr_val [::legacy::get_attribute st_master_tmp_directory /]
-set saved_attr_val /scratch/cs199-cfh/sky130-hammer/build/syn-rundir/.st_launch_eda-4.EECS.Berkeley.EDU_1268824
+set saved_attr_val /scratch/cs199-cfh/sky130-hammer/build/syn-rundir/.st_launch_eda-4.EECS.Berkeley.EDU_2283229
 if {(1 || [string index $cur_attr_val 0] ne "") &&  ((1 && ![attr_is_set st_master_tmp_directory /]) || $saved_attr_val ne $cur_attr_val)} {
 if {[is_attr_ifca st_master_tmp_directory ] && 0} {
 ::legacy::reset_attribute -quiet st_master_tmp_directory / 
@@ -9477,9 +9486,9 @@ if { "/home/ff/eecs151/fa24/pdk/sky130_scl_9T_0.0.5/lef/sky130_scl_9T.tlef /home
 catch {::legacy::set_attribute -quiet avoid false lib_cell:ss_100C_1v60.setup_set/sky130_ss_1.62_125/ICGX1}
 catch {::legacy::set_attribute -quiet user_function latch_posedge lib_pin:ss_100C_1v60.setup_set/sky130_ss_1.62_125/ICGX1/ECK}
 ::legacy::set_attribute force_init_mmmc_parasitics 1 /
-if {[file exists /scratch/cs199-cfh/sky130-hammer/build/syn-rundir/.st_launch_eda-4.EECS.Berkeley.EDU_1268824/dummy_pi_1764217949.db]} {
-if {[file readable /scratch/cs199-cfh/sky130-hammer/build/syn-rundir/.st_launch_eda-4.EECS.Berkeley.EDU_1268824/dummy_pi_1764217949.db]} {
-read_db -gps_superthreading /scratch/cs199-cfh/sky130-hammer/build/syn-rundir/.st_launch_eda-4.EECS.Berkeley.EDU_1268824/dummy_pi_1764217949.db
+if {[file exists /scratch/cs199-cfh/sky130-hammer/build/syn-rundir/.st_launch_eda-4.EECS.Berkeley.EDU_2283229/dummy_pi_1764989067.db]} {
+if {[file readable /scratch/cs199-cfh/sky130-hammer/build/syn-rundir/.st_launch_eda-4.EECS.Berkeley.EDU_2283229/dummy_pi_1764989067.db]} {
+read_db -gps_superthreading /scratch/cs199-cfh/sky130-hammer/build/syn-rundir/.st_launch_eda-4.EECS.Berkeley.EDU_2283229/dummy_pi_1764989067.db
 }
 }
 rc_st::bg::reset_message_severity

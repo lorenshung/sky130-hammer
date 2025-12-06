@@ -1,0 +1,12 @@
+set ::rc_st::bg::job {pbs_genopt_9 ./.pbs_eda-4.EECS.Berkeley.EDU_2283229/pbs_genopt_9.etf}
+set ::rc_st::bg::job_filename {pbs_genopt_9 ./.pbs_eda-4.EECS.Berkeley.EDU_2283229/pbs_genopt_9.etf}
+set ::rc_st::cache::tmp_dir {}
+set ::rc_st::bg::cache_send_cfname {}
+set ::rc_st::bg::cache_result_cfname {}
+set ::rc_st::cache::shortcut_fname {}
+set ::rc_st::cache::replace_old_in_assert_mode 1
+set ::rc_st::cache::max_file_size 10000000
+rc_st::bg::check_rsrc_mngr
+eval_novus {source {./.pbs_eda-4.EECS.Berkeley.EDU_2283229/pbs_genopt_9.etf}}
+::gps::bg::parallel_synthesis_end
+::rc_st::bg::free_rsrc_mngr

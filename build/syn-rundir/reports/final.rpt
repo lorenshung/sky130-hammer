@@ -5,23 +5,23 @@ QoS Summary for caliptra_top
 ================================================================================
 Metric                          final          
 ================================================================================
-Slack (ps):                      -285
-  R2R (ps):                      -285
+Slack (ps):                      -128
+  R2R (ps):                      -128
   I2R (ps):                  no_value
   R2O (ps):                  no_value
   I2O (ps):                  no_value
-  CG  (ps):                        -9
-TNS (ps):                     -22,946
-  R2R (ps):                   -22,937
+  CG  (ps):                      -123
+TNS (ps):                      -2,472
+  R2R (ps):                    -2,349
   I2R (ps):                  no_value
   R2O (ps):                  no_value
   I2O (ps):                  no_value
-  CG  (ps):                        -9
-Failing Paths:                    150
-Cell Area:                 17,465,685
-Total Cell Area:           17,465,685
-Leaf Instances:             1,100,797
-Total Instances:            1,100,797
+  CG  (ps):                      -123
+Failing Paths:                     35
+Cell Area:                 33,863,344
+Total Cell Area:           33,863,344
+Leaf Instances:             1,940,082
+Total Instances:            1,940,082
 Utilization (%):                 0.00
 Tot. Net Length (um):        no_value
 Avg. Net Length (um):        no_value
@@ -32,17 +32,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value
   Tot Cong:                  no_value
 ================================================================================
-CPU  Runtime (h:m:s):        05:21:32
-Real Runtime (h:m:s):        02:14:11
-CPU  Elapsed (h:m:s):        05:23:04
-Real Elapsed (h:m:s):        02:15:10
-Memory (MB):                  7663.54
+CPU  Runtime (h:m:s):        08:27:26
+Real Runtime (h:m:s):        03:18:29
+CPU  Elapsed (h:m:s):        08:30:21
+Real Elapsed (h:m:s):        03:20:22
+Memory (MB):                 12078.10
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 02:15:09
-Total Memory (MB):     7663.54
+Total Runtime (h:m:s): 03:20:20
+Total Memory (MB):     12078.10
 Executable Version:    22.11-s104_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
